@@ -24,6 +24,9 @@ export const initQuestionPage = () => {
     answersListElement.appendChild(answerElement);
   }
 
+  answersListElement
+    .addEventListener('click', selectAnswer);
+
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
@@ -34,3 +37,23 @@ const nextQuestion = () => {
 
   initQuestionPage();
 };
+
+/*  
+Highlights correct and/or wrong answer based on user interaction
+Modifies quizData to indicate if the question is answered
+*/
+const selectAnswer = (e) => {
+  const selectedAnswer = e.target;
+  const correctAnswer = document.getElementById('correctAnswer');
+
+  if (quizData.questions[quizData.currentQuestionIndex].selected === null) {
+    quizData.questions[quizData.currentQuestionIndex].selected = true;
+
+    if (selectedAnswer.id === 'correctAnswer') {
+      selectedAnswer.style.backgroundColor = 'green';
+    } else {
+      selectedAnswer.style.backgroundColor = 'red';
+      correctAnswer.style.backgroundColor = 'green';
+    }
+  }
+}
