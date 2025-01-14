@@ -18,11 +18,11 @@ export const createQuestionElement = (question) => {
 
     <div class="buttons-container">
      <button id="" class="skip-question-button">
-      Skip question
-    </button>
-    <button id="${NEXT_QUESTION_BUTTON_ID}" class="next-question-button">
-      Next question
-    </button>
+       Skip question
+     </button>
+     <button id="${NEXT_QUESTION_BUTTON_ID}" class="next-question-button">
+       Next question
+     </button>
     </div>
   `;
 
