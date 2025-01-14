@@ -1,5 +1,6 @@
 import { ANSWERS_LIST_ID } from '../constants.js';
 import { NEXT_QUESTION_BUTTON_ID } from '../constants.js';
+import { SKIP_QUESTION_BUTTON_ID } from '../constants.js';
 
 /**
  * Create a full question element
@@ -11,18 +12,25 @@ export const createQuestionElement = (question) => {
 
   // I use String.raw just to get fancy colors for the HTML in VS Code.
   element.innerHTML = String.raw`
+     <div class="header">
+        <div>
+            <p>Question No:</p>
+            <span id="question-number">1</span>
+        </div>
+        <div>
+            <p>Score:</p>
+            <span id="score">0</span>
+        </div>
+    </div>
     <h1 class="question-text">${question}</h1>
-
-    <ul id="${ANSWERS_LIST_ID}" class="answers-list">
-    </ul>
-
+    <ul id="${ANSWERS_LIST_ID}" class="answers-list"></ul>
     <div class="buttons-container">
-     <button id="" class="skip-question-button">
-       Skip question
-     </button>
-     <button id="${NEXT_QUESTION_BUTTON_ID}" class="next-question-button">
-       Next question
-     </button>
+        <button id="${SKIP_QUESTION_BUTTON_ID}" class="skip-question-button">
+          Skip question
+        </button>
+       <button id="${NEXT_QUESTION_BUTTON_ID}" class="next-question-button">
+          Next question
+       </button>
     </div>
   `;
 

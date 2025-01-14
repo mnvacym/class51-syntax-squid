@@ -1,6 +1,7 @@
 import {
   ANSWERS_LIST_ID,
   NEXT_QUESTION_BUTTON_ID,
+  SKIP_QUESTION_BUTTON_ID,
   USER_INTERFACE_ID,
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
@@ -27,6 +28,10 @@ export const initQuestionPage = () => {
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
+
+  document
+    .getElementById(SKIP_QUESTION_BUTTON_ID)
+    .addEventListener('click', skipQuestion); 
 };
 
 const nextQuestion = () => {
@@ -34,3 +39,14 @@ const nextQuestion = () => {
 
   initQuestionPage();
 };
+
+const skipQuestion = () => {
+  quizData.currentQuestionIndex++;
+  if (quizData.currentQuestionIndex >= quizData.questions.length) {
+    alert('No more questions!');
+    return;
+  }
+  initQuestionPage();
+
+};
+
