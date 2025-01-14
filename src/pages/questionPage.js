@@ -24,8 +24,7 @@ export const initQuestionPage = () => {
     answersListElement.appendChild(answerElement);
   }
 
-  answersListElement
-    .addEventListener('click', selectAnswer);
+  answersListElement.addEventListener('click', selectAnswer);
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
@@ -56,4 +55,4 @@ const selectAnswer = (e) => {
       correctAnswer.style.backgroundColor = 'green';
     }
   }
-}
+};
