@@ -18,7 +18,8 @@ export const quizData = {
       answers: {
 
       },
-      correct: 'b',
+      correct: 'c',
+      isSkipped: null,
       selected: null,
       links: [
         {
