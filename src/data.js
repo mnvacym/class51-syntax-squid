@@ -18,8 +18,6 @@ export const quizData = {
       answers: {
         a: 'constant, let, variable',
         b: 'var, const, let, function',
-        c: 'var, let, const',
-        d: 'let, const, function',
       },
       correct: 'c',
       selected: null,
