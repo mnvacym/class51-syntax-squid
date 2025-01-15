@@ -16,9 +16,8 @@ export const quizData = {
     {
       text: 'Which country has the most time zones?',
       answers: {
-
       },
-      correct: 'd',
+      correct: 'b',
       selected: null,
       test: null,
       links: [
