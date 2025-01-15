@@ -18,8 +18,9 @@ export const quizData = {
       answers: {
 
       },
-      correct: 'b',
+      correct: 'd',
       selected: null,
+      test: null,
       links: [
         {
           text: 'Time Zones by Country',
