@@ -15,3 +15,108 @@
 ul {
   list-style: none;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  max-width: 1000px;
+  margin: auto;
+  background: #1f1d30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  background-color: whitesmoke;
+  border: 1px solid #6757d9;
+  border-radius: 15px;
+  padding: 6px;
+}
+.header div {
+  display: flex;
+  align-items: center;
+}
+.header p {
+  color: #6757d9;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 10px;
+}
+.header span {
+  color: #6757d9;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  display: inline-block;
+  background-color: #fff;
+}
+.question-text {
+  background-color: #6757d9;
+  min-height: 50px;
+  min-width: 600px;
+  color: #fff;
+  margin: 60px 0 30px;
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 1.2rem;
+}
+.answers-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  list-style: none;
+}
+.answers-list li {
+  background-color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  text-align: left;
+  border: 2px solid #fff;
+  cursor: pointer;
+  overflow: hidden;
+  word-wrap: break-word;
+  min-height: 45px;
+  max-width: 300px;
+  transition: all 0.2s ease-in;
+}
+.answers-list li:hover {
+  background-color: #eeedfb;
+  border: 2px solid #fff;
+}
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+.next-question-button,
+.skip-question-button {
+  color: #6757d9;
+  background-color: #eeedfb;
+  border: 2px solid #6757d9;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 7px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.next-question-button:hover,
+.skip-question-button:hover {
+  background-color: #6757d9;
+  color: #fff;
+}
