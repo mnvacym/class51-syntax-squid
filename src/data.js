@@ -18,7 +18,6 @@ export const quizData = {
       answers: {
         a: 'constant, let, variable',
         b: 'var, const, let, function',
-        c: 'var, let, const',
       },
       correct: 'c',
       selected: null,
@@ -50,8 +49,7 @@ export const quizData = {
         },
         {
           text: 'MDN',
-          href:
-            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof',
+          href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof',
         },
       ],
     },
