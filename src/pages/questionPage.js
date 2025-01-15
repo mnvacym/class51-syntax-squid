@@ -1,6 +1,7 @@
 import {
   ANSWERS_LIST_ID,
   NEXT_QUESTION_BUTTON_ID,
+  SKIP_QUESTION_BUTTON_ID,
   USER_INTERFACE_ID,
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
@@ -24,13 +25,48 @@ export const initQuestionPage = () => {
     answersListElement.appendChild(answerElement);
   }
 
+  answersListElement.addEventListener('click', selectAnswer);
+
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
+
+  document
+    .getElementById(SKIP_QUESTION_BUTTON_ID)
+    .addEventListener('click', skipQuestion);
 };
 
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
 
+  initQuestionPage();
+};
+
+/*  
+Highlights correct and/or wrong answer based on user interaction
+Modifies quizData to indicate if the question is answered
+*/
+const selectAnswer = (e) => {
+  const selectedAnswer = e.target;
+  const correctAnswer = document.getElementById('correctAnswer');
+
+  if (quizData.questions[quizData.currentQuestionIndex].selected === null) {
+    quizData.questions[quizData.currentQuestionIndex].selected = true;
+
+    if (selectedAnswer.id === 'correctAnswer') {
+      selectedAnswer.style.backgroundColor = 'green';
+    } else {
+      selectedAnswer.style.backgroundColor = 'red';
+      correctAnswer.style.backgroundColor = 'green';
+    }
+  }
+};
+
+const skipQuestion = () => {
+  quizData.currentQuestionIndex++;
+  if (quizData.currentQuestionIndex >= quizData.questions.length) {
+    alert('No more questions!');
+    return;
+  }
   initQuestionPage();
 };
