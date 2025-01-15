@@ -31,7 +31,7 @@ export const initQuestionPage = () => {
 
   document
     .getElementById(SKIP_QUESTION_BUTTON_ID)
-    .addEventListener('click', skipQuestion); 
+    .addEventListener('click', skipQuestion);
 };
 
 const nextQuestion = () => {
@@ -47,6 +47,4 @@ const skipQuestion = () => {
     return;
   }
   initQuestionPage();
-
 };
-
