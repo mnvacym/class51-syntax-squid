@@ -27,8 +27,7 @@ export const quizData = {
       links: [
         {
           text: 'Time Zones by Country',
-          href:
-            'https://en.wikipedia.org/wiki/List_of_time_zones_by_country#:~:text=Time%20zones%20of%20a%20country,Antarctica%20and%20all%20other%20counties).',
+          href: 'https://en.wikipedia.org/wiki/List_of_time_zones_by_country#:~:text=Time%20zones%20of%20a%20country,Antarctica%20and%20all%20other%20counties).',
         },
         // {
         //   text: 'Tyler McGinnis',
@@ -71,8 +70,7 @@ export const quizData = {
       links: [
         {
           text: 'Islands by Country',
-          href:
-            'https://worldpopulationreview.com/country-rankings/number-of-islands-by-country',
+          href: 'https://worldpopulationreview.com/country-rankings/number-of-islands-by-country',
         },
       ],
     },
@@ -123,8 +121,7 @@ export const quizData = {
       links: [
         {
           text: 'Canberra',
-          href:
-            'https://en.wikipedia.org/wiki/List_of_Australian_capital_cities',
+          href: 'https://en.wikipedia.org/wiki/List_of_Australian_capital_cities',
         },
       ],
     },
@@ -141,8 +138,7 @@ export const quizData = {
       links: [
         {
           text: 'Queen of Pop',
-          href:
-            'https://www.grammy.com/news/madonna-albums-songs-celebration-tour-queen-of-pop-legacy-40th-anniversary',
+          href: 'https://www.grammy.com/news/madonna-albums-songs-celebration-tour-queen-of-pop-legacy-40th-anniversary',
         },
       ],
     },
@@ -190,11 +186,7 @@ export const quizData = {
       },
       correct: 'a',
       selected: null,
-      links: [
-        {
-
-        },
-      ],
+      links: [{}],
     },
   ],
 };

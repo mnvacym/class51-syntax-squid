@@ -17,13 +17,14 @@ ul {
 }
 @keyframes rotate {
   100% {
-    transform: rotate(20deg); 
+    transform: rotate(20deg);
   }
   100% {
-    transform: rotate(10deg); 
+    transform: rotate(10deg);
   }
 }
-.jpg, .logo{ 
+.jpg,
+.logo {
   width: 100px;
   height: 100px;
   object-fit: cover;

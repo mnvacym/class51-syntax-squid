@@ -25,37 +25,33 @@ export const initQuestionPage = () => {
 
   //Update Score Text
   const scoreElement = document.getElementById(SCORE_TEXT_ID);
-    scoreElement.innerText = `${score}`;
+  scoreElement.innerText = `${score}`;
 
- 
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
     const answerElement = createAnswerElement(key, answerText);
     answersListElement.appendChild(answerElement);
   }
   answersListElement.addEventListener('click', selectAnswer);
 
-//Update Question Number
-  document
-    .getElementById('question-number')
-    .innerText = `${quizData.currentQuestionIndex + 1}`;
+  //Update Question Number
+  document.getElementById('question-number').innerText = `${
+    quizData.currentQuestionIndex + 1
+  }`;
 
-document
- .getElementById(NEXT_QUESTION_BUTTON_ID)
-  .addEventListener('click', nextQuestion)
- 
+  document
+    .getElementById(NEXT_QUESTION_BUTTON_ID)
+    .addEventListener('click', nextQuestion);
+
   document
     .getElementById(SKIP_QUESTION_BUTTON_ID)
-    .addEventListener('click', skipQuestion); 
-  
+    .addEventListener('click', skipQuestion);
 };
 const nextQuestion = () => {
-  
   if (quizData.currentQuestionIndex + 1 < quizData.questions.length) {
     quizData.currentQuestionIndex++;
-   
+
     initQuestionPage();
-   
-  }else { 
+  } else {
     alert('No more qustions!');
   }
 };
@@ -67,15 +63,14 @@ Modifies quizData to indicate if the question is answered
 const selectAnswer = (e) => {
   const selectedAnswer = e.target;
   const correctAnswer = document.getElementById('correctAnswer');
-  
+
   if (quizData.questions[quizData.currentQuestionIndex].selected === null) {
     quizData.questions[quizData.currentQuestionIndex].selected = true;
 
     if (selectedAnswer.id === 'correctAnswer') {
       selectedAnswer.style.backgroundColor = 'green';
       score++;
-      document.getElementById(SCORE_TEXT_ID)
-      .innerText = `${score}`; 
+      document.getElementById(SCORE_TEXT_ID).innerText = `${score}`;
     } else {
       selectedAnswer.style.backgroundColor = 'red';
       correctAnswer.style.backgroundColor = 'green';
