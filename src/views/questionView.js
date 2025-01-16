@@ -30,6 +30,9 @@ export const createQuestionElement = (question) => {
         <button id="${SKIP_QUESTION_BUTTON_ID}" class="skip-question-button">
           Skip question
         </button>
+               <button id="hint-button" class="hint-button">
+          Hint
+       </button>   
        <button id="${NEXT_QUESTION_BUTTON_ID}" class="next-question-button">
           Next question
        </button>

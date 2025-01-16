@@ -119,7 +119,8 @@ body {
   margin-top: 20px;
 }
 .next-question-button,
-.skip-question-button {
+.skip-question-button,
+.hint-button {
   color: #6757d9;
   background-color: #eeedfb;
   border: 2px solid #6757d9;
@@ -129,9 +130,26 @@ body {
   border-radius: 15px;
   cursor: pointer;
   transition: all 0.2s ease-in;
+  width: 150px; 
+  height: 50px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .next-question-button:hover,
-.skip-question-button:hover {
+.skip-question-button:hover,
+.hint-button:hover {
   background-color: #6757d9;
   color: #fff;
+}
+
+.hint-text {
+  background-color: #6757d9;
+  min-height: 50px;
+  min-width: 600px;
+  color: #fff;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 1.2rem;
 }
