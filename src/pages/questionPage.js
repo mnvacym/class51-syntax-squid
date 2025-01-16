@@ -3,10 +3,13 @@ import {
   NEXT_QUESTION_BUTTON_ID,
   SKIP_QUESTION_BUTTON_ID,
   USER_INTERFACE_ID,
+  SCORE_TEXT_ID,
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
+
+let score = 0;
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -20,12 +23,20 @@ export const initQuestionPage = () => {
 
   const answersListElement = document.getElementById(ANSWERS_LIST_ID);
 
+  //Update Score Text
+  const scoreElement = document.getElementById(SCORE_TEXT_ID);
+  scoreElement.innerText = `${score}`;
+
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
     const answerElement = createAnswerElement(key, answerText);
     answersListElement.appendChild(answerElement);
   }
-
   answersListElement.addEventListener('click', selectAnswer);
+
+  //Update Question Number
+  document.getElementById('question-number').innerText = `${
+    quizData.currentQuestionIndex + 1
+  }`;
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
@@ -35,11 +46,14 @@ export const initQuestionPage = () => {
     .getElementById(SKIP_QUESTION_BUTTON_ID)
     .addEventListener('click', skipQuestion);
 };
-
 const nextQuestion = () => {
-  quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
+  if (quizData.currentQuestionIndex + 1 < quizData.questions.length) {
+    quizData.currentQuestionIndex++;
 
-  initQuestionPage();
+    initQuestionPage();
+  } else {
+    alert('No more qustions!');
+  }
 };
 
 /*  
@@ -55,6 +69,8 @@ const selectAnswer = (e) => {
 
     if (selectedAnswer.id === 'correctAnswer') {
       selectedAnswer.style.backgroundColor = 'green';
+      score++;
+      document.getElementById(SCORE_TEXT_ID).innerText = `${score}`;
     } else {
       selectedAnswer.style.backgroundColor = 'red';
       correctAnswer.style.backgroundColor = 'green';

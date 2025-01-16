@@ -1,6 +1,7 @@
 import { ANSWERS_LIST_ID } from '../constants.js';
 import { NEXT_QUESTION_BUTTON_ID } from '../constants.js';
 import { SKIP_QUESTION_BUTTON_ID } from '../constants.js';
+import { SCORE_TEXT_ID } from '../constants.js';
 
 /**
  * Create a full question element
@@ -20,7 +21,7 @@ export const createQuestionElement = (question) => {
         </div>
         <div>
             <p>Score:</p>
-            <span id="score">0</span>
+            <span id="${SCORE_TEXT_ID}" class:score>0</span>
         </div>
     </div>
     <h1 class="question-text">${question}</h1>
