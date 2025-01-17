@@ -43,7 +43,7 @@ export const initQuestionPage = () => {
     const answerElement = createAnswerElement(key, answerText);
     answersListElement.appendChild(answerElement);
   }
-  answersListElement.addEventListener('click', selectAnswer);
+  answersListElement.querySelectorAll('li').forEach((e) => e.addEventListener('click', selectAnswer));
 
   //Update Question Number
   document.getElementById('question-number').innerText = `${
