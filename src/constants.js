@@ -11,3 +11,5 @@ export const ANSWERS_LIST_ID = 'answers-list';
 export const NEXT_QUESTION_BUTTON_ID = 'next-question-button';
 export const SKIP_QUESTION_BUTTON_ID = 'skip-question-button';
 export const SCORE_TEXT_ID = 'score';
+export const PREVIOUS_QUESTION_BUTTON_ID = 'previous-question-button';
+export const PROGRESS_BAR_ID = 'progress-bar';
