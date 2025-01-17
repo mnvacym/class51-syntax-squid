@@ -13,7 +13,7 @@ import { quizData } from '../data.js';
 import { createFinalView } from '../views/finalView.js';
 
 let score = 0;
-let timer = null;
+let timer;
 let timeElapsed = 0;
 let timerStarted = false;
 let totalQuizTime = 0;
@@ -202,5 +202,12 @@ const updateTimerDisplay = () => {
 const startTimer = () => {
   timer = setInterval(() => {
     timeElapsed++;
+    // Timer'ı ekranda güncelle
+    const timerElement = document.getElementById(TIMER_ID);
+    if (timerElement) {
+      const minutes = Math.floor(timeElapsed / 60);
+      const seconds = timeElapsed % 60;
+      timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
   }, 1000);
 };
