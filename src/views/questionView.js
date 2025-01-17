@@ -5,7 +5,7 @@ import { SCORE_TEXT_ID } from '../constants.js';
 import { PREVIOUS_QUESTION_BUTTON_ID } from '../constants.js';
 import { PROGRESS_BAR_ID } from '../constants.js';
 import { IMAGES_ID } from '../constants.js';
-
+import { TIMER_ID } from '../constants.js';
 /**
  * Create a full question element
  * @returns {Element}
@@ -21,6 +21,9 @@ export const createQuestionElement = (question) => {
         <div>
             <p>Question No:</p>
             <span id="question-number">1</span>
+        </div>
+        <div class="timer-container">
+            <span id="${TIMER_ID}">0</span>
         </div>
         <div>
             <p>Score:</p>
