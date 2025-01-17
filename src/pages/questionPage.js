@@ -16,6 +16,7 @@ let score = 0;
 let timer = null;
 let timeElapsed = 0;
 let timerStarted = false;
+let totalQuizTime = 0;
 
 const hintMessages = [
   'Consider a country with many overseas territories spread across different oceans.',
@@ -72,9 +73,8 @@ export const initQuestionPage = () => {
     .forEach((e) => e.addEventListener('click', selectAnswer));
 
   //Update Question Number
-  document.getElementById('question-number').innerText = `${
-    quizData.currentQuestionIndex + 1
-  }`;
+  document.getElementById('question-number').innerText = `${quizData.currentQuestionIndex + 1
+    }`;
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
@@ -96,7 +96,7 @@ export const initQuestionPage = () => {
     startTimer();
     timerStarted = true;
   }
-  
+
   updateTimerDisplay();
 };
 
@@ -107,13 +107,10 @@ const nextQuestion = () => {
   } else {
     const userInterface = document.getElementById(USER_INTERFACE_ID);
     userInterface.innerHTML = '';
-    userInterface.appendChild(
-      createFinalView(score, quizData.questions.length)
-    );
     clearInterval(timer);
-    const minutes = Math.floor(timeElapsed / 60);
-    const seconds = timeElapsed % 60;
-    alert(`Quiz finished! Total time: ${minutes}:${seconds.toString().padStart(2, '0')}`);
+    userInterface.appendChild(
+      createFinalView(score, quizData.questions.length, timeElapsed)
+    );
   }
 };
 
@@ -205,6 +202,5 @@ const updateTimerDisplay = () => {
 const startTimer = () => {
   timer = setInterval(() => {
     timeElapsed++;
-    updateTimerDisplay();
   }, 1000);
 };

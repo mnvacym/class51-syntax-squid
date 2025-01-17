@@ -22,9 +22,8 @@ export const createQuestionElement = (question) => {
             <p>Question No:</p>
             <span id="question-number">1</span>
         </div>
-        <div>
-            <p>Time:</p>
-            <span id="${TIMER_ID}">60</span>
+        <div class="timer-container">
+            <span id="${TIMER_ID}">0</span>
         </div>
         <div>
             <p>Score:</p>
