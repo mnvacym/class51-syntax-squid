@@ -99,14 +99,7 @@ const nextQuestion = () => {
     userInterface.appendChild(createFinalView(score, quizData.questions.length));
   }
 };
-const skipQuestion = () => {
-  quizData.currentQuestionIndex++;
-  if (quizData.currentQuestionIndex >= quizData.questions.length) {
-    alert('No more questions!');
-    return;
-  }
-  initQuestionPage();
-};
+
 // Previous function
 const previousQuestion = () => {
   if (quizData.currentQuestionIndex > 0) {
