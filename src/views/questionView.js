@@ -1,7 +1,8 @@
-import { ANSWERS_LIST_ID } from '../constants.js';
+import { ANSWERS_LIST_ID, } from '../constants.js';
 import { NEXT_QUESTION_BUTTON_ID } from '../constants.js';
 import { SKIP_QUESTION_BUTTON_ID } from '../constants.js';
 import { SCORE_TEXT_ID } from '../constants.js';
+import { IMAGES_ID } from '../constants.js';
 
 /**
  * Create a full question element
@@ -13,7 +14,7 @@ export const createQuestionElement = (question) => {
 
   // I use String.raw just to get fancy colors for the HTML in VS Code.
   element.innerHTML = String.raw`
-  <img src=public/images/logo.jpg alt="logo" class="logo">
+  <img id="${IMAGES_ID}" src=public/images/logo.jpg alt="logo" >
      <div class="header">
         <div>
             <p>Question No:</p>
