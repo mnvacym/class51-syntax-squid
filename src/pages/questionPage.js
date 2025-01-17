@@ -11,6 +11,18 @@ import { quizData } from '../data.js';
 
 let score = 0;
 
+const hintMessages = [
+  'Consider a country with many overseas territories spread across different oceans.',
+  'He is known as the "Father of His Country" and served from 1789 to 1797',
+  'Look for a Scandinavian country known for its thousands of islands.',
+  "It makes up about 78% of Earth's atmosphere and is essential for life.",
+  'The number of rings represents the unity of countries from different continents.',
+  "It's a planned city, not the largest, and located between two major cities.",
+  'This iconic singer is famous for hits like "Like a Virgin" and "Vogue."',
+  'The war ended in the mid-20th century, just after the dropping of atomic bombs.',
+  'The first Olympic Games were held in the birthplace of the ancient Olympics.',
+  'This continent is home to over 50 countries, many in diverse regions.',
+ ];
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
   userInterface.innerHTML = '';
@@ -45,6 +57,9 @@ export const initQuestionPage = () => {
   document
     .getElementById(SKIP_QUESTION_BUTTON_ID)
     .addEventListener('click', skipQuestion);
+
+     // Add Hint Button Listener
+  addHintButtonListener(); 
 };
 const nextQuestion = () => {
   if (quizData.currentQuestionIndex + 1 < quizData.questions.length) {
@@ -85,4 +100,28 @@ const skipQuestion = () => {
     return;
   }
   initQuestionPage();
+};
+// Show hint for the current question
+const showHint = () => {
+  const hintButton = document.getElementById('hint-button');
+  const hintText = hintMessages[quizData.currentQuestionIndex];
+  
+  // Check if a hint is already displayed
+  const existingHint = document.querySelector('.hint-text');
+  if (existingHint) return;
+
+  // Create and display the hint element
+  const hintElement = document.createElement('p');
+  hintElement.textContent = `Hint: ${hintText}`;
+  hintElement.classList.add('hint-text');
+
+  const questionContainer = document.querySelector('.question-container');
+  questionContainer.appendChild(hintElement);
+
+};
+
+// Add event listener for the hint button
+const addHintButtonListener = () => {
+  const hintButton = document.getElementById('hint-button');
+  hintButton.addEventListener('click', showHint);
 };

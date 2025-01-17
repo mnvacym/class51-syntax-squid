@@ -21,8 +21,7 @@ export const quizData = {
         c: 'China ',
         d: 'USA ',
       },
-      correct: 'c',
-      isSkipped: null,
+      correct: 'b',
       selected: null,
       links: [
         {
@@ -133,7 +132,7 @@ export const quizData = {
         c: 'Lady Gaga',
         d: 'Britney Spears',
       },
-      correct: '1',
+      correct: 'a',
       selected: null,
       links: [
         {
@@ -143,12 +142,12 @@ export const quizData = {
       ],
     },
     {
-      text: 'What does "HTTP" stand for?',
+      text: 'What year did World War II end?',
       answers: {
-        a: 'Hyper Text Transfer Protocol',
-        b: 'High Transmission Transfer Protocol',
-        c: 'Hyperlink Text Transmission Process',
-        d: 'Hyper Text Transmission Protocol',
+        a: '1945',
+        b: '1940',
+        c: '1935',
+        d: '1950',
       },
       correct: 'a',
       selected: null,
