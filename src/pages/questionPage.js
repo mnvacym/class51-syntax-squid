@@ -44,7 +44,7 @@ export const initQuestionPage = () => {
 
   //Update Score Text
   const scoreElement = document.getElementById(SCORE_TEXT_ID);
-  scoreElement.innerText = `${score}`;
+  scoreElement.innerText = `${score}/10`;
 
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
     const answerElement = createAnswerElement(key, answerText);
@@ -125,7 +125,7 @@ const selectAnswer = (e) => {
     if (currentQuestion.correct === selectedAnswer.innerText[0]) {
       correctAnswer.style.backgroundColor = 'green';
       score++;
-      document.getElementById(SCORE_TEXT_ID).innerText = `${score}`;
+      document.getElementById(SCORE_TEXT_ID).innerText = `${score}/10`;
     } else {
       selectedAnswer.style.backgroundColor = 'red';
       correctAnswer.style.backgroundColor = 'green';
