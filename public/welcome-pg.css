@@ -1,0 +1,46 @@
+@keyframes rotate {
+  100% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+#img,
+.logo {
+  margin-bottom: 10px;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: rotate 3s linear infinite ;
+  transform-style: preserve-3d;
+}
+#start-quiz-button{
+  background-color: #fffefe;
+  color: #020202;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  border-style: none;
+}
+#start-quiz-button:hover{
+  background-color: #6757d9;
+  color: #fff;
+}
+#USERNAME{
+  background-color: #f6f7fb;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  border-style: none;
+}
+#USERNAME:hover{
+  background-color: #000000;
+  color: #ffffff;
+}

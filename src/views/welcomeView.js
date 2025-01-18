@@ -8,16 +8,16 @@ import { USERNAME_ID } from '../constants.js';
 export const createWelcomeElement = () => {
   const element = document.createElement('div');
   element.innerHTML = String.raw`    
-   <div>
-      <h1>Welcome</h1>
+   <div >
+      <h1 style=color:white>Quiz your way to the top</h1>
 
-      <img id="${IMAGES_ID}" src=public/images/logo.jpg>
+      <img id="${IMAGES_ID}" src=public/images/quiz.png>
 
     </div>
     
     <input type="text" id="${USERNAME_ID}" placeholder="write your name ">
   
-    <button id="${START_QUIZ_BUTTON_ID}">start quiz</button>
+    <button id="${START_QUIZ_BUTTON_ID}">Start Quiz</button>
   `;
   return element;
 };
