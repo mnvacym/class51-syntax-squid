@@ -27,7 +27,7 @@ ul {
 body {
   background-image: 
   linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Dark overlay */
-  url('./images/images\ \(4\).jpg');
+  url('./images/IMG_2004.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -50,6 +50,8 @@ body {
 .header div {
   display: flex;
   align-items: center;
+  
+
 }
 .header p {
   color: #6757d9;
@@ -99,6 +101,15 @@ body {
   min-height: 45px;
   max-width: 300px;
   transition: all 0.2s ease-in;
+  box-shadow : rgba(216, 83, 167, 0.4) -5px 5px,
+  rgba(216, 140, 188, 0.3) -10px 10px,
+   rgba(192, 152, 177, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px,
+     rgba(240, 46, 170, 0.05) -25px 25px;
+ border-radius: 15px;
+
+
+
 }
 .answers-list li:hover {
   background-color: #eeedfb;
@@ -123,8 +134,8 @@ body {
   border-radius: 15px;
   cursor: pointer;
   transition: all 0.2s ease-in;
-  width: 150px; 
-  height: 50px; 
+  width: 80px; 
+  height: 40px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,7 +147,7 @@ body {
   background-color: #6757d9;
   color: #fff;
 }
-.skip-question-button {
+.hint-button {
   font-size: 1rem;
 }
 
@@ -175,6 +186,9 @@ body {
   border-radius: 15px;
   transition: all 0.2s ease-in;
   margin-top:30px;
+
+
+  
 }
 .final-content p { 
   color: #6757d9;
