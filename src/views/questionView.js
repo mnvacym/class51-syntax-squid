@@ -5,6 +5,7 @@ import { SCORE_TEXT_ID } from '../constants.js';
 import { PREVIOUS_QUESTION_BUTTON_ID } from '../constants.js';
 import { PROGRESS_BAR_ID } from '../constants.js';
 import { IMAGES_ID } from '../constants.js';
+import { HINT_BUTTON_ID } from '../constants.js';
 
 /**
  * Create a full question element
@@ -40,7 +41,7 @@ export const createQuestionElement = (question) => {
         <button id="${SKIP_QUESTION_BUTTON_ID}" class="skip-question-button">
           Skip question
         </button>
-               <button id="hint-button" class="hint-button">
+               <button id="${HINT_BUTTON_ID}" class="hint-button">
           Hint
        </button>   
        <button id="${NEXT_QUESTION_BUTTON_ID}" class="next-question-button">

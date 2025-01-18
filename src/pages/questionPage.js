@@ -6,6 +6,7 @@ import {
   SCORE_TEXT_ID,
   PREVIOUS_QUESTION_BUTTON_ID,
   PROGRESS_BAR_ID,
+  HINT_TEXT_ID,
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
@@ -14,7 +15,7 @@ import { createFinalView } from '../views/finalView.js';
 
 let score = 0;
 
-const hintMessages = [
+export const hintMessages = [
   'Consider a country with many overseas territories spread across different oceans.',
   'He is known as the "Father of His Country" and served from 1789 to 1797',
   'Look for a Scandinavian country known for its thousands of islands.',
