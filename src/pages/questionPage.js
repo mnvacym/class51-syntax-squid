@@ -107,8 +107,6 @@ const previousQuestion = () => {
   if (quizData.currentQuestionIndex > 0) {
     quizData.currentQuestionIndex--;
     initQuestionPage();
-  } else {
-    alert('No more previous questions!');
   }
 };
 /*  
