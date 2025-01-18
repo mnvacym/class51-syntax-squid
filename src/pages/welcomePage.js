@@ -1,7 +1,12 @@
-import { USER_INTERFACE_ID, START_QUIZ_BUTTON_ID } from '../constants.js';
+import { 
+  USER_INTERFACE_ID, 
+  START_QUIZ_BUTTON_ID, 
+  USERNAME_ID 
+} from '../constants.js';
 import { createWelcomeElement } from '../views/welcomeView.js';
 import { initQuestionPage } from './questionPage.js';
-import { USERNAME_ID } from '../constants.js';
+
+export let userName = ''
 
 export const initWelcomePage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -10,33 +15,31 @@ export const initWelcomePage = () => {
   const welcomeElement = createWelcomeElement();
   userInterface.appendChild(welcomeElement);
 
-  const userName = welcomeElement.querySelector(`#${USERNAME_ID}`);
-
+  const userNameElement = welcomeElement.querySelector(`#${USERNAME_ID}`);
 
   document
     .getElementById(START_QUIZ_BUTTON_ID)
     .addEventListener('click', () => {
-      const name = userName.value.trim();
-      if (name==='') {
+      userName = userNameElement.value.trim();
+      if (userName==='') {
         alert('Please enter your name!');
         return;
       };
-      startQuiz(name);
+      startQuiz();
 
     });
-    userName.addEventListener('keyup', (e) => {
+    userNameElement.addEventListener('keyup', (e) => {
       if (e.key === 'Enter') {
-        const name = userName.value.trim();
-        if (name==='') {
+        userName = userNameElement.value.trim();
+        if (userName==='') {
           alert('Please enter your name!');
           return;
         };
-        startQuiz(name);
+        startQuiz();
       }
     });
 };
 
 const startQuiz = () => {
-  
   initQuestionPage();
 };

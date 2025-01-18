@@ -1,11 +1,10 @@
 import {
   ANSWERS_LIST_ID,
   NEXT_QUESTION_BUTTON_ID,
-  SKIP_QUESTION_BUTTON_ID,
   USER_INTERFACE_ID,
   SCORE_TEXT_ID,
   PREVIOUS_QUESTION_BUTTON_ID,
-  PROGRESS_BAR_ID, TIMER_ID,
+  TIMER_ID,
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
@@ -35,30 +34,12 @@ export const initQuestionPage = () => {
   userInterface.innerHTML = '';
 
   const currentQuestion = quizData.questions[quizData.currentQuestionIndex];
-  const displayQuestion = () => {
-    const currentQuestion = quizData.questions[quizData.currentQuestionIndex];
-    const userInterface = document.getElementById(USER_INTERFACE_ID);
-    userInterface.innerHTML = '';
-  };
 
   const questionElement = createQuestionElement(currentQuestion.text);
 
   userInterface.appendChild(questionElement);
 
   const answersListElement = document.getElementById(ANSWERS_LIST_ID);
-
-  //previous question button
-  if (currentQuestion.selected) {
-    const selectedAnswer = document.getElementById(currentQuestion.selected);
-    if (selectedAnswer === true) {
-      if (currentQuestion.selected === 'currentAnswer') {
-        selectedAnswer.style.backgroundColor = 'green';
-      } else {
-        selectedAnswer.style.backgroundColor = 'red';
-      }
-      selectedAnswer.style.pointerEvents = 'none';
-    }
-  }
 
   //Update Score Text
   const scoreElement = document.getElementById(SCORE_TEXT_ID);
@@ -81,10 +62,6 @@ export const initQuestionPage = () => {
     .addEventListener('click', nextQuestion);
 
   document
-    .getElementById(SKIP_QUESTION_BUTTON_ID)
-    .addEventListener('click', skipQuestion);
-
-  document
     .getElementById(PREVIOUS_QUESTION_BUTTON_ID)
     .addEventListener('click', previousQuestion);
 
@@ -97,7 +74,17 @@ export const initQuestionPage = () => {
     timerStarted = true;
   }
 
-  updateTimerDisplay();
+  updateTimerDisplay();  
+
+  // Color previous answers if the user already answered the question
+  if (currentQuestion.selected) {
+    if (currentQuestion.correct === currentQuestion.userAnswer) {
+      document.getElementById('userAnswer').style.backgroundColor = 'green';
+    } else {
+      document.getElementById('correctAnswer').style.backgroundColor = 'green';
+      document.getElementById('userAnswer').style.backgroundColor = 'red';
+    }
+  }
 };
 
 const nextQuestion = () => {
@@ -119,20 +106,6 @@ const previousQuestion = () => {
   if (quizData.currentQuestionIndex > 0) {
     quizData.currentQuestionIndex--;
     initQuestionPage();
-    const currentQuestion = quizData.questions[quizData.currentQuestionIndex];
-
-    if (currentQuestion.selected) {
-      const selectedAnswer = document.getElementById(currentQuestion.selected);
-
-      if (selectedAnswer) {
-        selectedAnswer.style.backgroundColor =
-          currentQuestion.selected === currentQuestion.correctAnswer
-            ? 'green'
-            : 'red';
-
-        document.getElementById(ANSWERS_LIST_ID).style.pointerEvents = 'none';
-      }
-    }
   } else {
     alert('No more previous questions!');
   }
@@ -143,28 +116,22 @@ Modifies quizData to indicate if the question is answered
 */
 const selectAnswer = (e) => {
   const selectedAnswer = e.target;
+  const currentQuestion = quizData.questions[quizData.currentQuestionIndex];
   const correctAnswer = document.getElementById('correctAnswer');
-  if (quizData.questions[quizData.currentQuestionIndex].selected === null) {
+  
+  if (quizData.questions[quizData.currentQuestionIndex].selected === null){
     quizData.questions[quizData.currentQuestionIndex].selected = true;
+    quizData.questions[quizData.currentQuestionIndex].userAnswer = e.target.innerText[0];
 
-    if (selectedAnswer.id === 'correctAnswer') {
-      selectedAnswer.style.backgroundColor = 'green';
+    if (currentQuestion.correct === selectedAnswer.innerText[0]) {
+      correctAnswer.style.backgroundColor = 'green';
       score++;
       document.getElementById(SCORE_TEXT_ID).innerText = `${score}`;
     } else {
       selectedAnswer.style.backgroundColor = 'red';
       correctAnswer.style.backgroundColor = 'green';
     }
-  }
-};
-
-const skipQuestion = () => {
-  quizData.currentQuestionIndex++;
-  if (quizData.currentQuestionIndex >= quizData.questions.length) {
-    alert('No more questions!');
-    return;
-  }
-  initQuestionPage();
+  }   
 };
 
 // Show hint for the current question
