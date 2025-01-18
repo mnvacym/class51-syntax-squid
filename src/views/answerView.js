@@ -11,6 +11,10 @@ export const createAnswerElement = (key, answerText) => {
     element.id = 'correctAnswer';
   }
 
+  if (quizData.questions[quizData.currentQuestionIndex].userAnswer === key) {
+    element.id = 'userAnswer';
+  }
+
   element.innerHTML = String.raw`
     ${key}: ${answerText}
   `;

@@ -23,6 +23,7 @@ export const quizData = {
       },
       correct: 'b',
       selected: null,
+      userAnswer: null,
       links: [
         {
           text: 'Time Zones by Country',
@@ -44,6 +45,7 @@ export const quizData = {
       },
       correct: 'b',
       selected: null,
+      userAnswer: null,
       links: [
         {
           text: 'presidents',
@@ -66,6 +68,7 @@ export const quizData = {
       },
       correct: 'a',
       selected: null,
+      userAnswer: null,
       links: [
         {
           text: 'Islands by Country',
@@ -83,6 +86,7 @@ export const quizData = {
       },
       correct: 'b',
       selected: null,
+      userAnswer: null,
       links: [
         {
           text: 'Atmosphere',
@@ -100,6 +104,7 @@ export const quizData = {
       },
       correct: 'a',
       selected: null,
+      userAnswer: null,
       links: [
         {
           text: 'Olympic Flag',
@@ -117,6 +122,7 @@ export const quizData = {
       },
       correct: 'd',
       selected: null,
+      userAnswer: null,
       links: [
         {
           text: 'Canberra',
@@ -134,6 +140,7 @@ export const quizData = {
       },
       correct: 'a',
       selected: null,
+      userAnswer: null,
       links: [
         {
           text: 'Queen of Pop',
@@ -151,6 +158,7 @@ export const quizData = {
       },
       correct: 'a',
       selected: null,
+      userAnswer: null,
       links: [
         {
           text: 'HTTP',
@@ -168,6 +176,7 @@ export const quizData = {
       },
       correct: 'b',
       selected: null,
+      userAnswer: null,
       links: [
         {
           text: 'Olympic Games',
@@ -185,6 +194,7 @@ export const quizData = {
       },
       correct: 'a',
       selected: null,
+      userAnswer: null,
       links: [{}],
     },
   ],
