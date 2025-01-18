@@ -30,7 +30,7 @@ export const createQuestionElement = (question) => {
     </div>
     <div>
       <p>Score:</p>
-      <span id="${SCORE_TEXT_ID}" class:score>0</span>
+      <span id="${SCORE_TEXT_ID}" class=score>0</span>
     </div>
   </div>
   <div class="bax-container" style="margin-bottom: 49px;">

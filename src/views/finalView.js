@@ -1,5 +1,6 @@
 import { userName } from '../pages/welcomePage.js'
-
+export const totalQuestions = 10;
+export const score = 0;
 export const createFinalView = (score, totalQuestions, totalTime) => {
   const minutes = Math.floor(totalTime / 60);
   const seconds = totalTime % 60;
@@ -23,7 +24,7 @@ export const createFinalView = (score, totalQuestions, totalTime) => {
   <div class="final-content"> 
     <p>🌟 Score: ${score}/${totalQuestions} 🌟<br>
     ⏰ Quiz completed in: ${timeString} ⏰<br>
-    ${message[0]}, ${userName} ${message[1]}</p>  
+    ${message[0]},<span class="highlighted-user"> ${userName} </span> ${message[1]}</p>  
   </div>
   <div class="high-score-container">
     <h1>High Scores</h1>

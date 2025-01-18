@@ -16,8 +16,6 @@ ul {
   list-style: none;
 }
 
-
-
 * {
   padding: 0;
   margin: 0;
@@ -52,7 +50,7 @@ body {
 .header div {
   display: flex;
   align-items: center;
-  
+  padding: 5px;
 
 }
 .header p {
@@ -65,11 +63,12 @@ body {
   color: #6757d9;
   font-size: 1rem;
   font-weight: 600;
-  width: 25px;
-  height: 25px;
   line-height: 25px;
   text-align: center;
   display: inline-block;
+}
+.header span {
+  margin-right:6px;
 }
 .question-text {
   background-color: #6757d9;
@@ -108,8 +107,6 @@ body {
     rgba(240, 46, 170, 0.1) -20px 20px,
      rgba(240, 46, 170, 0.05) -25px 25px;
  border-radius: 15px;
-
-
 
 }
 .answers-list li:hover {
@@ -227,7 +224,7 @@ body {
 
 .timer-container {
   position: absolute;
-  left: 50%;
+  left:50%;
   transform: translateX(-50%);
   font-size: 24px;
   font-weight: bold;
@@ -298,4 +295,10 @@ body {
 .final-page-container button:hover {
   background-color: #6757d9;
   color: #fff;
+}
+
+.highlighted-user {
+  color: #6757d9;;
+  font-weight: bold;
+  font-size:35px;
 }
