@@ -4,7 +4,8 @@ import {
   SCORE_TEXT_ID, 
   PREVIOUS_QUESTION_BUTTON_ID,  
   IMAGES_ID, 
-  TIMER_ID
+  TIMER_ID,
+  HINT_BUTTON_ID
 } from '../constants.js';
 
 /**
@@ -39,7 +40,7 @@ export const createQuestionElement = (question) => {
       <button id="${PREVIOUS_QUESTION_BUTTON_ID}"  class="previous-question-button">
         &#x23EA;
       </button>
-      <button id="hint-button" class="hint-button">
+      <button id="${HINT_BUTTON_ID}" class="hint-button">
         Hint
       </button>   
       <button id="${NEXT_QUESTION_BUTTON_ID}" class="next-question-button">

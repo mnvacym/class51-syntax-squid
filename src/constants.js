@@ -14,3 +14,5 @@ export const PREVIOUS_QUESTION_BUTTON_ID = 'previous-question-button';
 export const IMAGES_ID = 'img';
 export const USERNAME_ID = 'username';
 export const TIMER_ID = 'timer';
+export const HINT_BUTTON_ID = 'hint-button';
+export const HINT_TEXT_ID = 'hint-text';
