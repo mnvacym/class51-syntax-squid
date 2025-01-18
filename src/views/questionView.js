@@ -19,7 +19,7 @@ export const createQuestionElement = (question) => {
 
   // I use String.raw just to get fancy colors for the HTML in VS Code.
   element.innerHTML = String.raw`
-  <img id="${IMAGES_ID}" src=public/images/quiz.png>
+ <img id="${IMAGES_ID}" src="./public/images/quiz.png">
   <div class="header"style="margin-bottom:6px;">
     <div>
       <p>Question No:</p>

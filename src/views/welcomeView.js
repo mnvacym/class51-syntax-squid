@@ -10,13 +10,15 @@ import {
  */
 export const createWelcomeElement = () => {
   const element = document.createElement('div');
-  element.innerHTML = String.raw`    
+  element.innerHTML = String.raw` 
+  <img src="./public/images/quiz.png"  class="logo">  
   <div>
-    <h1 style=color:white>Quiz your way to the top</h1>
-    <img id="${IMAGES_ID}" src=public/images/quiz.png>
+    <h1 class="title">Syntax Squid Challenge
   </div> 
-  <input type="text" id="${USERNAME_ID}" placeholder="write your name ">
-  <button id="${START_QUIZ_BUTTON_ID}">Start Quiz</button>
+    <div class="input-container">
+  <input type="text" id="${USERNAME_ID}" class="username-input" placeholder="Enter your name ">
+  <button id="${START_QUIZ_BUTTON_ID}" class="start-button">Start Quiz</button>
+  </div>
   `;
 
   return element;
