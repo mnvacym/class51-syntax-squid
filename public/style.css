@@ -119,44 +119,46 @@ body {
 .buttons-container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   margin-top: 20px;
+  align-items: center; 
+  gap: 20px;
 }
 .next-question-button,
-.skip-question-button,
-.previous-question-button,
-.hint-button {
-  color: #6757d9;
-  background-color: #eeedfb;
-  border: 1px solid #6757d9;
-  font-size:1.2rem;
-  font-weight: bold;
-  padding: 7px 7px;
-  border-radius: 20px;
+.previous-question-button {
+  background: none;
+  border: none;
+  padding: 7px;
   cursor: pointer;
   transition: all 0.2s ease-in;
-  width: 70px; 
-  height: 60px;
-  display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
 }
 .hint-button {
   width: 60px;
   height: 60px;
   border-radius: 100%;
+  background-color: #eeedfb;
+  border: 1px solid #6757d9;
+  color: #6757d9;
+  font-size:1.2rem;
+  font-weight: bold;
+  padding: 7px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  align-items: center;
+  justify-content: center;
 }
-.next-question-button:hover,
-.skip-question-button:hover,
-.hint-button:hover,
-.previous-question-button:hover {
+
+.hint-button:hover
+ {
   background-color: #6757d9;
   color: #fff;
 }
-.hint-button {
-  font-size: 1rem;
+.next-question-button img:hover,
+.previous-question-button img:hover {
+  transform: scale(1.5);
 }
-
 .final-page-container { 
   background: linear-gradient(to bottom, #c769ba, #7611eb);
   text-align: center;

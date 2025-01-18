@@ -38,13 +38,13 @@ export const createQuestionElement = (question) => {
     <ul id="${ANSWERS_LIST_ID}" class="answers-list"></ul>
     <div class="buttons-container">
       <button id="${PREVIOUS_QUESTION_BUTTON_ID}"  class="previous-question-button">
-        &#x23EA;
+       <img src="public/images/prev-button.png" alt="Prev Icon" style="width: 50px; height: 50px;">
       </button>
       <button id="${HINT_BUTTON_ID}" class="hint-button">
         Hint
       </button>   
       <button id="${NEXT_QUESTION_BUTTON_ID}" class="next-question-button">
-        &#x23E9;
+       <img src="public/images/next-button.png" alt="Next Icon" style="width: 50px; height: 50px;">
       </button>
     </div>
   </div>
