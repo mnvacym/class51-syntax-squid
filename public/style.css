@@ -46,6 +46,8 @@ body {
   border: 1px solid #6757d9;
   border-radius: 15px;
   padding: 6px;
+  min-height: 50px;
+  min-width: 600px;
 }
 .header div {
   display: flex;
@@ -66,7 +68,6 @@ body {
   line-height: 25px;
   text-align: center;
   display: inline-block;
-  background-color: #fff;
 }
 .question-text {
   background-color: #6757d9;
@@ -74,7 +75,7 @@ body {
   min-width: 600px;
   color: #fff;
   margin: 60px 0 30px;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 15px;
   font-size: 1.2rem;
 }
@@ -116,18 +117,23 @@ body {
 .hint-button {
   color: #6757d9;
   background-color: #eeedfb;
-  border: 2px solid #6757d9;
-  font-size:1.5rem;
+  border: 1px solid #6757d9;
+  font-size:1.2rem;
   font-weight: bold;
-  padding: 7px 10px;
-  border-radius: 15px;
+  padding: 7px 7px;
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.2s ease-in;
-  width: 150px; 
-  height: 50px; 
+  width: 70px; 
+  height: 60px; 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.hint-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
 }
 .next-question-button:hover,
 .skip-question-button:hover,
@@ -210,10 +216,9 @@ body {
   min-height: 50px;
   min-width: 600px;
   color: #fff;
-  margin-top: 20px;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 15px;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 .header {
   display: flex;
