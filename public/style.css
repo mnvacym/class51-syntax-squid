@@ -224,7 +224,7 @@ body {
 
 .timer-container {
   position: absolute;
-  left:48%;
+  left:50%;
   transform: translateX(-50%);
   font-size: 24px;
   font-weight: bold;
