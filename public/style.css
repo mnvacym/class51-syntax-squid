@@ -73,6 +73,10 @@ body {
 .header span {
   margin-right:6px;
 }
+.bax-container {
+  margin-bottom: 30px;
+}
+
 .question-text {
   background-color: #6757d9;
   min-height: 50px;
@@ -187,7 +191,7 @@ body {
 .final-header h1 { 
   color: #eeedfb;
   background-color: #6757d9;
-  border: 2px solid #eeedfb;
+  border: 1px solid #eeedfb;
   font-size:1.5rem;
   font-weight: bold;
   padding: 7px 10px;
@@ -199,7 +203,6 @@ body {
 .final-content p { 
   color: #eeedfb;
   background-color: #eeedfb86;
-  border: 2px solid #6757d9;
   font-size:1.5rem;
   font-weight: bold;
   padding: 4px 5px;
@@ -238,7 +241,7 @@ body {
 .high-score-container h1 {
   color: #eeedfb;
   background-color: #6757d9;
-  border: 2px solid #eeedfb;
+  border: 1px solid #eeedfb;
   font-size:1.5rem;
   font-weight: bold;
   padding: 7px 10px;
@@ -250,7 +253,6 @@ body {
 .high-score-container table {
   color: #6757d9;
   background-color: #eeedfb86;
-  border: 2px solid #6757d9;
   font-size:1rem;
   font-weight: bold;
   border-radius: 15px;
@@ -287,7 +289,7 @@ body {
 .final-page-container button {
   color: #6757d9;
   background-color: #eeedfb;
-  border: 2px solid #6757d9;
+  border: 1px solid #6757d9;
   font-size:1.2rem;
   font-weight: bold;
   padding: 7px 10px;

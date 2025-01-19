@@ -83,7 +83,7 @@ const setHighScores = (userName, score, timeString) => {
     highScoreList = [latestHighScore];
     localStorage.setItem('highScores', JSON.stringify(highScoreList));
   }
-
+  
   highScoreList.sort((result1, result2) => (result2.score - result1.score));
 
   return highScoreList;

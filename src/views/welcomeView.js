@@ -11,7 +11,7 @@ import {
 export const createWelcomeElement = () => {
   const element = document.createElement('div');
   element.innerHTML = String.raw` 
-  <img src="./public/images/quiz.png"  class="logo">  
+  <img id="${IMAGES_ID}" src="./public/images/quiz.png"> 
   <div>
     <h1 class="title">Syntax Squid Challenge
   </div> 

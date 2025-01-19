@@ -28,7 +28,7 @@
 }
 
 .title {
-  margin-bottom: 30px;;
+  margin-bottom: 30px;
   color: #3d347c;
   font-size: 40px;
   display: inline-block;
@@ -55,13 +55,14 @@
   }
 }
 .username-input {
-  
-  background-color: #bbbac5;
-  border: 2px solid #6757d9;;
+  background-color: #a3a2ac;
+  color: #6757d9;
+  text-align: center;
+  border: 2px solid #d9d9d9;
   padding: 10px 10px;
   margin-top: 20px;
   width: 300px;
-  border-radius: 15px;
+  border-radius: 20px;
   font-size: 1.2rem;
   transition: all 0.2s ease-in;
 }
@@ -71,7 +72,7 @@ outline: none;
 }
 
 .username-input::placeholder{
-  color: #6757d9;
+  color: #898989;
   font-weight: bold;
 
 }
