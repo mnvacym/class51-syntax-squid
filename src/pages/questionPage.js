@@ -16,20 +16,7 @@ let score = 0;
 let timer;
 let timeElapsed = 0;
 let timerStarted = false;
-let totalQuizTime = 0;
 
-export const hintMessages = [
-  'Consider a country with many overseas territories spread across different oceans.',
-  'He is known as the "Father of His Country" and served from 1789 to 1797',
-  'Look for a Scandinavian country known for its thousands of islands.',
-  "It makes up about 78% of Earth's atmosphere and is essential for life.",
-  'The number of rings represents the unity of countries from different continents.',
-  "It's a planned city, not the largest, and located between two major cities.",
-  'This iconic singer is famous for hits like "Like a Virgin" and "Vogue."',
-  'The war ended in the mid-20th century, just after the dropping of atomic bombs.',
-  'The first Olympic Games were held in the birthplace of the ancient Olympics.',
-  'This continent is home to over 50 countries, many in diverse regions.',
-];
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
   userInterface.innerHTML = '';
@@ -127,16 +114,15 @@ const selectAnswer = (e) => {
       score++;
       document.getElementById(SCORE_TEXT_ID).innerText = `${score}/10`;
     } else {
-      selectedAnswer.style.backgroundColor = 'red';
-      correctAnswer.style.backgroundColor = 'green';
+      selectedAnswer.style.backgroundColor = '#f527277d';
+      correctAnswer.style.backgroundColor = '#00ff0080';
     }
   }   
 };
 
 // Show hint for the current question
 const showHint = () => {
-  const hintButton = document.getElementById('hint-button');
-  const hintText = hintMessages[quizData.currentQuestionIndex];
+  const hintText = quizData.questions[quizData.currentQuestionIndex].hintMessage;
 
   // Check if a hint is already displayed
   const existingHint = document.querySelector('.hint-text');

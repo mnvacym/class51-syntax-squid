@@ -24,6 +24,7 @@ export const quizData = {
       correct: 'b',
       selected: null,
       userAnswer: null,
+      hintMessage: 'Consider a country with many overseas territories spread across different oceans.',
       links: [
         {
           text: 'Time Zones by Country',
@@ -46,6 +47,7 @@ export const quizData = {
       correct: 'b',
       selected: null,
       userAnswer: null,
+      hintMessage: 'He is known as the "Father of His Country" and served from 1789 to 1797.',
       links: [
         {
           text: 'presidents',
@@ -69,6 +71,7 @@ export const quizData = {
       correct: 'a',
       selected: null,
       userAnswer: null,
+      hintMessage: 'Look for a Scandinavian country known for its thousands of islands.',
       links: [
         {
           text: 'Islands by Country',
@@ -87,6 +90,7 @@ export const quizData = {
       correct: 'b',
       selected: null,
       userAnswer: null,
+      hintMessage: "It makes up about 78% of Earth's atmosphere and is essential for life.",
       links: [
         {
           text: 'Atmosphere',
@@ -105,6 +109,7 @@ export const quizData = {
       correct: 'a',
       selected: null,
       userAnswer: null,
+      hintMessage: 'The number of rings represents the unity of countries from different continents.',
       links: [
         {
           text: 'Olympic Flag',
@@ -123,6 +128,7 @@ export const quizData = {
       correct: 'd',
       selected: null,
       userAnswer: null,
+      hintMessage: "It's a planned city, not the largest, and located between two major cities.",
       links: [
         {
           text: 'Canberra',
@@ -134,13 +140,14 @@ export const quizData = {
       text: 'Which pop star is known as the "Queen of Pop"?',
       answers: {
         a: 'Madonna',
-        b: 'Jennifer Lopes',
+        b: 'Jennifer Lopez',
         c: 'Lady Gaga',
         d: 'Britney Spears',
       },
       correct: 'a',
       selected: null,
       userAnswer: null,
+      hintMessage: 'This iconic singer is famous for hits like "Like a Virgin" and "Vogue."',
       links: [
         {
           text: 'Queen of Pop',
@@ -159,6 +166,7 @@ export const quizData = {
       correct: 'a',
       selected: null,
       userAnswer: null,
+      hintMessage: 'The war ended in the mid-20th century, just after the dropping of atomic bombs.',
       links: [
         {
           text: 'HTTP',
@@ -177,6 +185,7 @@ export const quizData = {
       correct: 'b',
       selected: null,
       userAnswer: null,
+      hintMessage: 'The first Olympic Games were held in the birthplace of the ancient Olympics.',
       links: [
         {
           text: 'Olympic Games',
@@ -189,12 +198,13 @@ export const quizData = {
       answers: {
         a: 'Africa',
         b: 'Asia',
-        c: 'Europa',
+        c: 'Europe',
         d: 'South America',
       },
       correct: 'a',
       selected: null,
       userAnswer: null,
+      hintMessage: 'This continent is home to over 50 countries, many in diverse regions.',
       links: [{}],
     },
   ],

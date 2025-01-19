@@ -34,7 +34,7 @@ export const createQuestionElement = (question) => {
       <span id="${SCORE_TEXT_ID}" class=score>0</span>
     </div>
   </div>
-  <div class="bax-container" style="margin-bottom: 49px;">
+  <div class="bax-container">
     <h1 class="question-text"  style="margin-top:15px;">${question}</h1>
     <ul id="${ANSWERS_LIST_ID}" class="answers-list"></ul>
     <div class="buttons-container">
